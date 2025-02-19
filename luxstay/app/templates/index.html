@@ -1,0 +1,364 @@
+{% extends 'base.html' %}
+{% block title %} Menu Utama {% endblock %}
+
+{% block content %}
+<!-- menu home -->
+<div class="container" id="home">
+    <div class="row">
+        <div class="col mt-5">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/t3.jpg') }}" class="d-block w-100" alt="..." height="400">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/t1.jpg') }}" class="d-block w-100" alt="..." height="400">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='img/t4.jpg') }}" class="d-block w-100" alt="..." height="400">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+  </div>
+  <!-- end menu home -->
+    <!-- tentang kami -->
+    <style>
+      /* Gaya untuk bagian container */
+      .container {
+        
+        padding: 5px 5px;
+        
+        
+        font-family: 'Poppins', sans-serif; /* Font modern */
+        color: #333; /* Warna teks netral */
+      }
+    
+      /* Gaya judul */
+      .container h3 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #3498db; /* Warna biru tua */
+        margin-bottom: 20px;
+        border-bottom: 3px solid #3498db; /* Garis bawah biru elegan */
+        display: inline-block; /* Menampilkan elemen inline */
+        padding-bottom: 10px; /* Jarak ke garis bawah */
+      }
+    
+      /* Gaya paragraf */
+      .container p {
+        font-size: 1rem;
+        line-height: 1.8; /* Jarak antar baris lebih lega */
+        text-align: justify;
+        margin-bottom: 15px;
+      }
+    
+      /* Gaya poin-poin fasilitas */
+      .container ul {
+        list-style-type: none; /* Menghilangkan bullet default */
+        padding: 0;
+      }
+    
+      .container ul li {
+        font-size: 1rem;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee; /* Garis bawah halus */
+        color: #555;
+      }
+    
+      .container ul li:last-child {
+        border-bottom: none; /* Menghilangkan garis pada poin terakhir */
+      }
+    
+      /* Gaya poin penting (judul fasilitas dan keamanan) */
+      .container .highlight {
+        font-weight: bold;
+        color: #3498db; /* Biru untuk menonjolkan poin */
+      }
+    </style>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3>Tentang Kami</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            Temukan kos eksklusif yang nyaman dan terjangkau untuk kebutuhan Anda!
+          </p>
+          <p>
+            Kami menyediakan informasi lengkap tentang kos berkualitas tinggi di berbagai lokasi. Dengan fasilitas terbaik dan suasana yang tenang, kos kami cocok untuk pelajar, mahasiswa, maupun pekerja profesional.
+          </p>
+          <ul>
+            <li>
+              <span class="highlight">Harga Terjangkau</span>: Tersedia pilihan harga yang sesuai dengan anggaran Anda tanpa mengurangi kualitas.
+            </li>
+            <li>
+              <span class="highlight">Fasilitas Lengkap</span>: 
+              <ul>
+                <li>Kamar luas dan bersih</li>
+                <li>Akses internet (WiFi)</li>
+                <li>Listrik dan air terjamin</li>
+                <li>Dapur dan laundry bersama</li>
+              </ul>
+            </li>
+            <li>
+              <span class="highlight">Keamanan Terjamin</span>: CCTV 24 jam dan akses masuk yang aman untuk kenyamanan penghuni.
+            </li>
+          </ul>
+          <p>
+            Jelajahi berbagai pilihan kos eksklusif yang sesuai dengan kebutuhan dan gaya hidup Anda di website kami. Jangan lewatkan kesempatan untuk menemukan tempat tinggal terbaik dengan harga kompetitif.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- end tentang kami -->  
+  <!-- start kamar -->
+  <div class="container about-container" id="kamar">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3>TIPE KAMAR</h3>
+        </div>
+    </div>
+    <div class="row">
+      <!-- gambar kamar 1 -->
+        <div class="col-md">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='img/kos2.png') }}" class="card-img-top w-100" alt="...">
+            <h4><div class="card-header">Tipe Standard Room
+            </div></h4>
+            <div class="card-body">
+              <p class="card-text">Fasilitas:<br>Kasur single, meja belajar, lemari pakaian, kipas angin, kamar mandi luar.</p>
+              <p class="card-text">Ukuran:<br>3x3 meter</p>
+              <p class="card-text">Harga :<br>Rp. 1.000.000/Bulan</p>
+              <br>
+              <div class="d-grid gap-2">
+                <a href="#booking" class="btn btn-outline-primary">booking now</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- gambar kamar 1 -->
+<!-- gambar kamar 2 -->
+        <div class="col-md">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='img/kos1.png') }}" class="card-img-top" alt="...">
+            <h4><div class="card-header">Tipe Deluxe Room
+            </div></h4>
+            <div class="card-body">
+              <p class="card-text">Fasilitas:<br>Kasur queen size, meja belajar, lemari pakaian besar, AC, kamar mandi dalam, Wi-Fi.</p>
+              <p class="card-text">Ukuran:<br>4x3 meter</p>
+              <p class="card-text">Harga:<br>Rp 1.800.000/bulan</p>
+              <div class="d-grid gap-2">
+                <a href="#booking" class="btn btn-outline-primary">booking now</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- gambar kamar 2 -->
+    </div>
+    <!-- baris2 -->
+    <div class="row">
+      <!-- gambar kamar 1 -->
+        <div class="col-md">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='img/kos3.png') }}" class="card-img-top" alt="...">
+            <h4><div class="card-header">Tipe Premium Room
+            </div></h4>
+            <div class="card-body">
+              <p class="card-text">Fasilitas:<br>Kasur king size, meja kerja ergonomis, lemari besar, AC, smart TV, kamar mandi dalam dengan water heater, Wi-Fi berkecepatan tinggi.</p>
+              <p class="card-text">Ukuran:<br>5x4 meter</p>
+              <p class="card-text">Harga:<br>Rp 2.500.000/bulan</p>
+              <br>
+              <div class="d-grid gap-2">
+                <a href="#booking" class="btn btn-outline-primary">booking now</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- gambar kamar 1 -->
+<!-- gambar kamar 2 -->
+        <div class="col-md">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='img/kos4.png') }}" class="card-img-top" alt="...">
+            <h4><div class="card-header">Tipe Sultan Room
+            </div></h4>
+            <div class="card-body">
+              <p class="card-text">Fasilitas:<br>Kasur king size, sofa, meja makan kecil, lemari besar, AC, smart TV, dapur mini, kamar mandi dalam dengan water heater, Wi-Fi berkecepatan tinggi</p>
+              <p class="card-text">Ukuran:<br>6x5 meter</p>
+              <p class="card-text">Harga:<br>Rp 3.500.000/bulan</p>
+              <div class="d-grid gap-2">
+              <a href="#booking" class="btn btn-outline-primary">booking now</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- gambar kamar 2 -->
+    </div>
+    
+  </div>
+  <!-- end kamar -->
+    <!-- start fasilitas -->
+   <div class="container about-container" id="fasilitas">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3>Fasilitas</h3>
+        </div>
+    </div>
+    <div class="row">
+      <!-- start 1 -->
+      <div class="col-md">
+        <div class="card" >
+          <img src="{{ url_for('static', filename='img/kos7.png') }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Keamanan dan CCTV 24 Jam</h5>
+            <p class="card-text">Kos dilengkapi dengan sistem keamanan terkini, seperti akses pintu menggunakan kartu atau kode digital. Area kos diawasi oleh CCTV 24 jam yang dipantau secara rutin untuk memberikan rasa aman bagi penghuni.</p>
+          </div><br>
+        </div>
+      </div>
+        <div class="col-md">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='img/kos6.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Parkiran Luas</h5>
+              <p class="card-text">Area parkir yang luas mampu menampung kendaraan penghuni, baik motor maupun mobil. Lokasi parkir dirancang strategis dan mudah diakses, sehingga memudahkan penghuni dalam memarkir kendaraan tanpa khawatir kehabisan tempat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md mb-3">
+          <div class="card" >
+            <img src="{{ url_for('static', filename='img/kos5.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mini Gym</h5>
+              <p class="card-text">Kos menyediakan mini gym dengan berbagai peralatan olahraga modern yang cocok untuk menjaga kebugaran tubuh. Penghuni dapat berolahraga kapan saja tanpa perlu pergi ke gym umum.</p>
+            </div><br>
+          </div>
+        </div>
+    </div>
+  </div>
+   <!-- end fasilitas -->
+   <!-- start booking -->
+   <div class="container about-container" id="booking">
+    <div class="row">
+        <div class="col text-center mt-5">
+            <h3>FORM BOOKING</h3>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Terima Kasih</strong> {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <!-- my office-->
+        <div class="col-lg-4">
+          <div class="card text-white bg-secondary">
+            <div class="card-body">
+              <div class="card-title"><h4>KONTAK KAMI<h4></div>          
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nomor Telepon: +62 812-3456-7890</li>
+            <li class="list-group-item">WhatsApp: +62 812-3456-7890</li>
+            <li class="list-group-item">Email: luxstay-kost@gmail.com</li>
+            <li class="list-group-item">Instagram: @kos_eksklusif</li>
+            <li class="list-group-item">Alamat: Jl. Mawar No. 123, Jakarta Selatan, Indonesia</li>
+          </ul>
+
+        </div>
+        <!-- end my office-->
+        <!-- pemesanan kamar-->
+        <div class="col-lg-4">
+          <form action="/#booking" method="post">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama Pemesan</label>
+            <input type="text" class="form-control" id="nama" name="nama" autocomplate="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Pemesan</label>
+            <input type="email" class="form-control" id="emai" name="email" autocomplate="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">No Telepon</label>
+            <input type="text" class="form-control" id="phone" name="phone" autocomplate="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="ket" class="form-label">Keterangan</label>
+            <textarea class="form-control" id="ket" name="ket" rows="3"></textarea>
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <label for="tipe" class="form-label">Tipe Kamar</label>
+          <select class="form-select" aria-label="Default select example" name="tipe">
+            <option value=""></option>
+            <option value="Standard Room">Standard Room</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Premium Room">Premium Room</option>
+            <option value="Suite Room">Suite Room</option>
+          </select>
+          <div class="mb-3">
+            <label for="checkin" class="form-label">Tanggal Masuk Kost</label>
+            <input type="date" class="form-control" id="checkin" name="checkin" required>
+          </div>
+          <div class="mb-3">
+            <label for="checkout" class="form-label">Tanggal Keluar Kost</label>
+            <input type="date" class="form-control" id="checkout" name="checkout" required>
+          </div>
+          <div class="mb-3">
+            <label for="jml" class="form-label">Jumlah Kamar</label>
+            <input type="number" class="form-control" id="jml" name="jml" required>
+          </div>
+          
+
+          <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-success btn-lg btn-block" onclick="confirm('anda yakin')">konfirmasi pemesanan</button></div>
+        </div>
+      </form>
+        <!-- end pemesanan kamar-->
+
+    </div>
+  </div>
+   <!-- end booking -->
+
+
+
+{% endblock %}

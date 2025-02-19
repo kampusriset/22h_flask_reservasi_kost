@@ -1,0 +1,72 @@
+<div class="modal fade" id="updateModal{{row[0]}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form action="{{ url_for('customerupdate') }}" method="post">
+                    <div class="mb-3">
+                      <label for="nama" class="form-label">Nama Pemesan</label>
+                      <input type="hidden" class="form-control" id="id" name="id" value="{{ row[0] }}">
+                      <input type="text" class="form-control" id="nama" name="nama" value="{{ row[1] }}" autocomplate="off" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email Pemesan</label>
+                      <input type="email" class="form-control" id="emai" name="email" value="{{ row[2] }}" autocomplate="off" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">No Telepon</label>
+                      <input type="text" class="form-control" id="phone" name="phone" value="{{ row[3] }}" autocomplate="off" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="tipe" class="form-label">Status</label>
+                    <select class="form-select" aria-label="Default select example" name="status">
+                      <option value="{{ row[9] }}">{{ row[9] }}</option>
+                      <option value="Konfirmasi">Konfirmasi</option>
+                      <option value="Booking">Booking</option>
+                      <option value="Leave">Leave</option>
+                    </select>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="mb-3">
+                    <label for="tipe" class="form-label">Tipe Kamar</label>
+                    <select class="form-select" aria-label="Default select example" name="tipe">
+                      <option value="{{ row[4] }}">{{ row[4] }}</option>
+                      <option value="Standard Room">Standard Room</option>
+                      <option value="Deluxe Room">Deluxe Room</option>
+                      <option value="Premium Room">Premium Room</option>
+                      <option value="Suite Room">Suite Room</option>
+                    </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkin" class="form-label">Tanggal Masuk Kost</label>
+                        <input type="date" class="form-control" id="checkin" name="checkin" value="{{ row[5] }}" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="checkout" class="form-label">Tanggal Keluar Kost</label>
+                        <input type="date" class="form-control" id="checkout" name="checkout" value="{{ row[6] }}" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="jml" class="form-label">Jumlah Kamar</label>
+                        <input type="number" class="form-control" id="jml" name="jml" required>
+                      </div>
+                    
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary" onclick="confirm('Anda Yakin')">UPDATE</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+  

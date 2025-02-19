@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>My-App - {% block title %} {% endblock %}</title>
+    <style type="text/css">
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+  </head>
+  <body>
+     <!-- start navbar top -->
+     <style>
+      /* Warna latar belakang navbar yang lembut */
+      .navbar.bg-body-tertiary {
+        background-color: #6ec1e4 !important; /* Biru muda */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+      }
+    
+      /* Warna teks navbar */
+      .navbar .nav-link {
+        color: white !important;
+        font-weight: bold; /* Membuat teks terlihat lebih menonjol */
+        transition: color 0.3s ease; /* Efek transisi saat hover */
+      }
+    
+      /* Warna teks link saat hover */
+      .navbar .nav-link:hover {
+        color: #fef08a !important; /* Warna kuning pastel */
+      }
+    
+      /* Warna aktif untuk link yang dipilih */
+      .navbar .nav-link.active {
+        background-color: #00a1c9 !important; /* Biru lebih gelap */
+        color: white !important;
+        border-radius: 20px; /* Membuat sudut link aktif melengkung */
+      }
+    
+      /* Warna teks untuk brand */
+      .navbar-brand {
+        color: #fff !important;
+        font-size: 1.5rem; /* Ukuran teks lebih besar */
+        font-weight: bold; /* Teks lebih tegas */
+      }
+    
+      /* Tambahan efek animasi hover untuk brand */
+      .navbar-brand:hover {
+        color: #ffdd57 !important; /* Warna kuning cerah */
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan pada teks */
+      }
+    </style>
+    
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
+      <div class="container">
+      <a class="navbar-brand" href="#">LuxStay Kost</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#kamar">Kamar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fasilitas">Fasilitas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#booking">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+    
+      <!-- end navbar top -->
+      <!-- statr content -->
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        {% block content %}
+
+        {% endblock %}
+      </div>
+      <!-- end start -->
+
+      <div class="container">
+        <div class="row">
+            <div class="col mt-5">
+                <nav class=" bg-body-tertiary px-3 mb-3 fixed-bottom">
+                    <marquee>l LuxStay Kost l Alamat: Jl. Mawar No. 123, Jakarta Selatan, Indonesia l Nomor Telepon: +62 812-3456-7890 l Email: luxstay-kost@gmail.com l</marquee>
+            </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
