@@ -10,10 +10,10 @@ Berikut merupakan flowchart yang menggambarkan alur kerja aplikasi:
 
 ## Perkenalan Tim
 Anggota kelompok:
-- Rangga Hutama Putra(2213010471)
-- Habib Muhammad Ridwan(2213010466)
-- Ilham Abiansyah(2213010453)
-- Nirmala Maharani(2213010464)
+- Rangga Hutama Putra - [backend(login,register,logout)]
+- Habib Muhammad Ridwan - [backend(crud)]
+- Ilham Abiansyah(2213010453) - [frontend(desain)]
+- Nirmala Maharani(2213010464) - [frontend(desain)]
 
 ## Link Video Dokumentasi
 [klik disini](https://www.youtube.com/watch?v=93bVhXPbBQA)
